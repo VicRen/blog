@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - lts/*
+
+cache:
+  directories:
+    - node_modules
+
+services:
+  docker
+
+install:
+  - npm install hexo-cli -g
+  - npm install
+
+script:
+  - hexo g
+  - make build
+  - make login
+  - make push
+
+branches:
+  only:
+    - /^\d+\.\d+(\.\d+)?(-\S*)?$/
