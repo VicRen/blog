@@ -12,8 +12,8 @@ login:
 	@docker login -u ${DOCKER_USERNAME} ${REGISTRY_HOST} -p ${DOCKER_PASSWORD}
 
 deploy:
-	@ssh ${ENV_USER}@${ENV_HOST} -p ${ENV_PASSWORD}
-	@ssh 
+	@ssh ${DEPLOY_USERNAME}@${DEPLOY_HOST}
+	@echo "testing" > testing.txt
 
 help: ## Display this help screen
 	@grep -h -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

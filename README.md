@@ -1,6 +1,6 @@
 # [Vic's Blog](https://blog.vic.ren)
 
-![](https://travis-ci.com/VicRen/blog.svg?branch=master)
+[![Build Status](https://travis-ci.com/VicRen/blog.svg?branch=master)](https://travis-ci.com/VicRen/blog)
 
 This is the source code of Vic's Blog powered by hexo and Next theme.
 
